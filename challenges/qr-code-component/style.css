@@ -25,6 +25,10 @@ body {
   width: 350px;
   padding: 1rem;
   border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .card__img {
@@ -35,13 +39,12 @@ body {
 }
 
 .card__details {
-  margin: 0 auto;
   width: 320px;
 }
 
 .card__title {
   font-size: 1.6rem;
-  margin: 1rem 0;
+  margin: 2rem 0 1rem;
   color: var(--dblue);
 }
 
