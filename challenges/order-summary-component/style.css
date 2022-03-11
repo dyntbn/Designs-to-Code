@@ -175,7 +175,6 @@ body {
 
   .card__subtitle {
     width: 25ch;
-    margin: inherit auto;
   }
 
   .card__icon {
