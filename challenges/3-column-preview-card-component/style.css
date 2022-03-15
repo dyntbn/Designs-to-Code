@@ -30,14 +30,14 @@
 }
 
 body {
-  font-family: 'Lexend Deca';
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: white;
+  background-color: var(--vlgray);
 }
 
 .cards {
@@ -52,8 +52,8 @@ body {
   align-items: flex-start;
   padding: 2.5rem;
   line-height: 1.8rem;
-  width: 18rem;
-  height: 33rem;
+  max-width: 18rem;
+  min-width: 250px;
   box-sizing: border-box;
 }
 
@@ -88,7 +88,7 @@ body {
 
 .card__title {
   color: var(--vlgray);
-  font-family: 'Big Shoulders Display';
+  font-family: 'Big Shoulders Display', sans-serif;
   text-transform: uppercase;
   font-size: 2.5rem;
   margin: 2rem 0 3rem;
@@ -96,7 +96,7 @@ body {
 
 .card__subtitle {
   color: var(--twhite);
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .card__link {
@@ -108,22 +108,37 @@ body {
   padding: .5rem 3rem;
   align-items: flex-start;
   border: 2px solid var(--vlgray);
-  transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
 }
 
 .card__link:hover {
   background-color: transparent;
   color: var(--vlgray);
+  box-shadow: none;
 }
 
 @media screen and (max-width: 900px) {
+  .cards {
+    max-width: 85vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card__link {
+    align-items: center;
+    padding: .5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .cards {
     flex-direction: column;
     margin: 5rem 0rem 1rem;
   }
 
   .card {
-    width: 300px;
+    max-width: unset;
+    width: 85vw;
   }
 
   .card:first-of-type {
@@ -134,5 +149,12 @@ body {
   .card:last-of-type {
     border-top-right-radius: 0;
     border-bottom-left-radius: var(--bradius);
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 300px;
   }
 }
