@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --borange: hsl(31, 77%, 52%);
+  --dcyan: hsl(184, 100%, 22%);
+  --vdcyan: hsl(179, 100%, 13%);
+  --twhite: hsla(0, 0%, 100%, 0.75);
+  --vlgray: hsl(0, 0%, 95%);
+  --bradius: 6px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  font-weight: 700;
+  transition: opacity 200ms ease-in-out;
+}
+
+.attribution a:hover {
+  opacity: .8;
+}
+
+body {
+  font-family: 'Lexend Deca';
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5rem;
+  line-height: 1.8rem;
+  width: 18rem;
+  height: 33rem;
+  box-sizing: border-box;
+}
+
+.card--primary {
+  --text-color: var(--borange);
+  background-color: var(--borange);
+}
+
+.card--secondary {
+  --text-color: var(--dcyan);
+  background-color: var(--dcyan);
+}
+
+.card--tertiary {
+  --text-color: var(--vdcyan);
+  background-color: var(--vdcyan);
+}
+
+.card:first-of-type {
+  border-top-left-radius: var(--bradius);
+  border-bottom-left-radius: var(--bradius);
+}
+
+.card:last-of-type {
+  border-bottom-right-radius: var(--bradius);
+  border-top-right-radius: var(--bradius);
+}
+
+.card__icon {
+  width: 4rem;
+}
+
+.card__title {
+  color: var(--vlgray);
+  font-family: 'Big Shoulders Display';
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin: 2rem 0 3rem;
+}
+
+.card__subtitle {
+  color: var(--twhite);
+  margin-bottom: 5rem;
+}
+
+.card__link {
+  color: var(--text-color);
+  background-color: var(--vlgray);
+  border-radius: 24px;
+  text-decoration: none;
+  box-shadow: 4px 12px 24px rgba(0, 0, 0, .2);
+  padding: .5rem 3rem;
+  align-items: flex-start;
+  border: 2px solid var(--vlgray);
+  transition: background-color 200ms ease-in-out;
+}
+
+.card__link:hover {
+  background-color: transparent;
+  color: var(--vlgray);
+}
+
+@media screen and (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+    margin: 5rem 0rem 1rem;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  .card:first-of-type {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: var(--bradius);
+  }
+
+  .card:last-of-type {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--bradius);
+  }
+}
