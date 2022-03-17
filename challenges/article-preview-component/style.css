@@ -39,29 +39,19 @@ body {
   background-color: var(--lgblue);
 }
 
-/* body:hover {
-  background: url('design/desktop-active-state.jpg');
-}
-
-body:hover .card {
-  opacity: .5;
-  color: greend;
-  background-color: white;
-} */
-
 .card {
   margin: 1rem 0;
   display: flex;
   background-color: white;
-  width: 740px;
-  height: 280px;
+  width: 50rem;
+  height: 17.5rem;
   border-radius: 12px;
   box-shadow: 1px 12px 24px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
 .card__img {
-  width: 100%;
+  width: 40%;
   height: 100%;
   object-fit: cover;
   object-position: left;
@@ -74,8 +64,7 @@ body:hover .card {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  border-top-right-radius: var(--bradius);
-  width: 100%;
+  width: 60%;
 }
 
 .card__title {
@@ -120,12 +109,12 @@ body:hover .card {
   display: block;
 }
 
-.card__share,
-.card__share img {
+.card__btn,
+.card__btn img {
   cursor: pointer;
 }
 
-.card__share {
+.card__btn {
   border: none;
   background-color: var(--lgblue);
   padding: .5rem;
@@ -133,20 +122,22 @@ body:hover .card {
   transition: filter 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
-.card__share:hover {
+.share-btn--active,
+.card__btn:hover {
   background-color: var(--ddblue);
 }
 
-.card__share:hover img {
+.share-btn--active img,
+.card__btn:hover img {
   filter: brightness(100);
 }
 
-.card__share img {
+.card__btn img {
   object-fit: contain;
   object-position: center;
 }
 
-.share {
+.popup-share {
   display: flex;
   align-items: center;
   background-color: var(--vdgblue);
@@ -156,17 +147,16 @@ body:hover .card {
   letter-spacing: .2rem;
   position: absolute;
   box-shadow: 1px 12px 24px rgba(0, 0, 0, 0.2);
-  right: -4.4rem;
+  right: -4.3rem;
   bottom: 5.8rem;
-  overflow: visible;
 }
 
-.share p {
+.popup-share p {
   margin-right: 1rem;
   text-transform: uppercase;
 }
 
-.share--inactive {
+.popup--hidden {
   display: none;
 }
 
@@ -195,7 +185,7 @@ body:hover .card {
   object-position: center;
 }
 
-.share__arrow {
+.popup-share__arrow {
   display: block;
   position: absolute;
   background-color: inherit;
@@ -204,4 +194,102 @@ body:hover .card {
   transform: rotate(45deg);
   left: 44%;
   bottom: -5px;
+}
+
+@media screen and (max-width: 950px) {
+  .card {
+    width: 45rem;
+    height: 17.5rem;
+    font-size: .7rem;
+  }
+
+  .popup-share {
+    right: 1.3rem;
+  }
+
+  .popup-share__arrow {
+    left: 85%;
+    bottom: -5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    flex-direction: column;
+    width: 85vw;
+    height: 100%;
+    font-size: 1rem;
+  }
+
+  .card__wrapper {
+    padding-bottom: 1rem;
+  }
+
+  .card__img {
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 12px;
+  }
+
+  .card__wrapper {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card__subtitle {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .share-btn--active {
+    position: relative;
+  }
+
+  .popup-share {
+    padding: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  .popup-share__arrow {
+    display: none;
+  }
+
+  .btn--social {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 300px;
+  }
+
+  .card__title {
+    font-size: .94rem;
+  }
+
+  .card__subtitle {
+    font-size: .75rem;
+    width: 31ch;
+  }
+
+  .card__name {
+    font-size: .7rem;
+  }
+
+  .popup-share {
+    padding: 1.6rem;
+    justify-content: left;
+  }
+
+  .popup-share p {
+    font-size: .9rem;
+  }
 }

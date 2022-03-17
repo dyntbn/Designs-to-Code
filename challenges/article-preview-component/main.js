@@ -1,8 +1,9 @@
-const shareElement = document.querySelector('.share');
-const cardShareElement = document.querySelector('.card__share');
+const popUpShareElement = document.querySelector('.popup-share');
+const cardShareBtnElement = document.querySelector('.card__btn');
 
-cardShareElement.addEventListener('click', toggleDisplay);
+cardShareBtnElement.addEventListener('click', toggleDisplay);
 
 function toggleDisplay() {
-  shareElement.classList.toggle('share--inactive');
+  popUpShareElement.classList.toggle('popup--hidden');
+  cardShareBtnElement.classList.toggle('share-btn--active');
 }
