@@ -22,7 +22,7 @@
 }
 
 .attribution a {
-  color: hsl(280, 45%, 44%);
+  color: hsl(hsl(285, 100%, 60%));
   transition: opacity 200ms ease-in-out;
   text-decoration: none;
   font-weight: var(--fw-700);
