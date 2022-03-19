@@ -76,6 +76,7 @@ body {
 .card__title {
   font-size: 1.5em;
   color: var(--white);
+  font-weight: var(--fw-700);
   line-height: 1.2;
 }
 
