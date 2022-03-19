@@ -135,9 +135,6 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-  body {
-    background-color: lightblue;
-  }
 
   .card {
     width: 700px;
