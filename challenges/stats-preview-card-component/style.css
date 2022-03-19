@@ -114,19 +114,13 @@ body {
 .card__picture {
   position: relative;
   width: 50%;
+  background-color: var(--sviolet);
 }
 
-.card__overlay,
 .card__img {
+  filter: contrast(1.6) brightness(.6) opacity(.6);
   width: 100%;
   height: 100%;
-}
-
-.card__overlay {
-  position: absolute;
-  display: block;
-  background-color: var(--sviolet);
-  filter: contrast(1.6) brightness(.6) opacity(.6);
 }
 
 .card__img {
