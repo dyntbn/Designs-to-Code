@@ -45,62 +45,60 @@ body {
 }
 
 .card {
-  width: 1100px;
-  height: 450px;
+  width: 800px;
+  height: 350px;
   display: flex;
   margin: 1rem 0;
   background-color: var(--ddblue);
   overflow: hidden;
   border-radius: 6px;
+  box-shadow: 2px 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .card__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 4.5rem;
+  justify-content: space-between;
+  padding: 2.5rem;
   width: 50%;
 }
 
 .card__title,
 .card__feature span {
-  font-family: 'Lexend Deca',
-    sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.card__description {
+  width: 90%;
+  font-size: 1.2rem;
 }
 
 .card__title {
+  font-size: 1.5em;
   color: var(--white);
-  font-size: 2.2rem;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .card__title span {
   color: var(--sviolet);
 }
 
-.card__subtitle,
-.card__features {
-  width: 85%;
-}
-
 .card__subtitle {
+  font-size: .65em;
+  line-height: 1.6;
   margin-top: 1.5rem;
   color: var(--stwhite-paragraph);
-  line-height: 1.6;
+  width: 39ch;
 }
 
 .card__features {
-  width: 75%;
-  margin-top: 4.5rem;
+  font-size: 1.3rem;
+  margin-top: 2rem;
   color: var(--white);
   font-weight: var(--fw-700);
   display: flex;
   justify-content: space-between;
-}
-
-.card__feature {
-  font-size: 1.35rem;
-  font-family: 'Inter', sans-serif;
+  width: 80%;
 }
 
 .card__feature span {
@@ -109,31 +107,64 @@ body {
   display: block;
   text-transform: uppercase;
   margin-top: .3rem;
-  font-size: .8rem;
+  font-size: .55em;
 }
 
 .card__picture {
   position: relative;
+  width: 50%;
+}
+
+.card__overlay,
+.card__img {
+  width: 100%;
+  height: 100%;
 }
 
 .card__overlay {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: var(--sviolet);
   position: absolute;
+  display: block;
+  background-color: var(--sviolet);
   filter: contrast(1.6) brightness(.6) opacity(.6);
 }
 
 .card__img {
   display: block;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: right;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .card {
+    width: 700px;
+    height: 250px;
+  }
+
+  .card__wrapper {
+    width: 50%;
+  }
+
+  .card__picture {
+    width: 50%;
+  }
+
+  .card__description {
+    font-size: .95rem;
+    width: 85%;
+  }
+
+  .card__features {
+    width: 60%;
+    font-size: .85rem;
+    margin-top: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
 
   .card,
   .card__wrapper,
@@ -143,43 +174,37 @@ body {
   }
 
   .card {
-    width: 80vw;
-    flex-direction: column-reverse;
+    width: 85vw;
     height: 100%;
+    flex-direction: column-reverse;
     text-align: center;
+  }
+
+  .card__wrapper,
+  .card__picture,
+  .card__subtitle {
+    width: 100%;
   }
 
   .card__wrapper {
     box-sizing: border-box;
-    padding: 2rem;
-    width: 100%;
   }
 
-  .card__title {
-    font-size: 2.2rem;
-  }
-
-  .card__subtitle {
-    font-size: 1.2rem;
-    width: 80%;
+  .card__description {
+    font-size: 4vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   .card__features {
-    margin-top: 2rem;
+    font-size: 4vw;
     text-align: center;
     flex-direction: column;
   }
 
-  .card__feature {
-    font-size: 2rem;
-  }
-
   .card__feature span {
-    margin-bottom: 1rem;
-  }
-
-  .card__picture {
-    width: 100%;
+    margin-bottom: .8rem;
   }
 }
 
@@ -188,15 +213,22 @@ body {
     width: 300px;
   }
 
-  .card__title {
-    font-size: 1.6rem;
+  .card__wrapper {
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+
+  }
+
+  .card__description {
+    font-size: 1rem;
   }
 
   .card__subtitle {
-    font-size: .85rem;
+    font-size: .9em;
+    width: 29ch;
   }
 
-  .card__feature {
+  .card__features {
     font-size: 1rem;
   }
 }
