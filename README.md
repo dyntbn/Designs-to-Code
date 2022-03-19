@@ -18,3 +18,13 @@ Frontend mockup design to code. Challenges by [FrontendMentor.io](https://www.fr
   - [Code](challenges/3-column-preview-card-component/)
   - [Live Preview](http://dyntbn.github.io/designs-to-code/challenges/3-column-preview-card-component/index.html)
   - [FrontendMentor](https://www.frontendmentor.io/solutions/responsive-3-column-preview-card-component-Da3kCy0Ie)
+
+- Article preview component
+  - [Code](challenges/article-preview-component/)
+  - [Live Preview](http://dyntbn.github.io/designs-to-code/challenges/article-preview-component/index.html)
+  - [FrontendMentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT/hub/responsive-article-preview-component-6yEu3ja8n)
+
+- Stats preview card component
+  - [Code](challenges/stats-preview-card-component)
+  - [Live Preview](http://dyntbn.github.io/designs-to-code/challenges/stats-preview-card-component/index.html)
+  - [FrontendMentor](https://www.frontendmentor.io/solutions/responsive-stats-preview-card-component-aqTMAVgWt)
