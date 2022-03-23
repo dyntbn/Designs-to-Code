@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>NFT preview card component</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <article class="card">
+      <button class="card__btn-view" id="card__btn-view" aria-label="preview">
+        <span class="card__img-item-overlay"></span>
+        <img src="img/image-equilibrium.jpg" alt="Clear cube with red reflections" class="card__img-item">
+      </button>
+      <h1 class="card__title"><a href="#">Equilibrium #3429</a></h1>
+      <p class="card__subtitle">Our Equilibrium collection promotes balance and calm.</p>
+      <div class="card__pricing">
+        <span class="card__price">
+          <img src="img/icon-ethereum.svg" alt="Eth symbol">0.041 ETH
+        </span>
+        <span class="card__countdown">
+          <img src="img/icon-clock.svg" alt="Clock symbol">3 days left
+        </span>
+      </div>
+      <hr class="card__hr">
+      <div class="card__footer">
+        <img src="img/image-avatar.png" alt="Jules Wyvern's profile picture" class="card__img-avatar">
+        <p class="card__credits">Creation of <a href="#" class="card__link-author">Jules Wyvern</a></p>
+      </div>
+    </article>
+    <aside class="card__popup">
+      <div class="card__popup-wrapper">
+        <img src="img/image-equilibrium.jpg" alt="Clear cube with red reflections">
+        <button id="popup-close">Close</button>
+      </div>
+    </aside>
+  </main>
+  <footer class="attribution">
+    <p>Challenge by <a href=" https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. Coded by <a
+        href="https://github.com/dyntbn">Joshua</a>.</p>
+  </footer>
+</body>
+
+</html>
