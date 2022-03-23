@@ -40,6 +40,7 @@ body {
   font-size: 18px;
   font-family: 'Outfit', sans-serif;
   background-color: var(--vdblue-mbg);
+  font-weight: var(--fw-300);
 }
 
 .card__popup {
@@ -146,6 +147,7 @@ body {
 }
 
 .card__title {
+  font-weight: var(--fw-600);
   margin: 1rem 0;
   font-size: 1.45rem;
 }
@@ -171,6 +173,11 @@ body {
 
 .card__pricing {
   margin: 1rem 0;
+}
+
+.card__price,
+.card__countdown {
+  font-weight: var(--fw-400);
 }
 
 .card__price {
