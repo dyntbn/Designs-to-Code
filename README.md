@@ -28,3 +28,8 @@ Frontend mockup design to code. Challenges by [FrontendMentor.io](https://www.fr
   - [Code](challenges/stats-preview-card-component)
   - [Live Preview](http://dyntbn.github.io/designs-to-code/challenges/stats-preview-card-component/index.html)
   - [FrontendMentor](https://www.frontendmentor.io/solutions/responsive-stats-preview-card-component-aqTMAVgWt)
+
+- Profile card component
+  - [Code](challenges/profile-card-component/)
+  - [Live Preview](http://dyntbn.github.io/designs-to-code/challenges/profile-card-component/index.html)
+  - [FrontendMentor](https://www.frontendmentor.io/solutions/responsive-profile-card-component-okWDhppio)
