@@ -33,3 +33,8 @@ Frontend mockup design to code. Challenges by [FrontendMentor.io](https://www.fr
   - [Code](challenges/profile-card-component/)
   - [Live Preview](http://dyntbn.github.io/designs-to-code/challenges/profile-card-component/index.html)
   - [FrontendMentor](https://www.frontendmentor.io/solutions/responsive-profile-card-component-okWDhppio)
+
+- NFT preview card component
+  - [Code](challenges/nft-preview-card-component/)
+  - [Live Preview](https://dyntbn.github.io/designs-to-code/challenges/)
+  - [FrontendMentor](https://www.frontendmentor.io/solutions/responsive-nft-preview-card-component-H6zQ8iS8S)
