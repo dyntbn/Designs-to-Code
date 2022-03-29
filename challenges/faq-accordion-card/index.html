@@ -17,8 +17,14 @@
 <body>
   <main>
     <article class="card">
-      <img src="img/illustration-woman-online-mobile.svg" alt="Girl using a monitor" class="card__img-primary">
-      <div class="card__wrapper">
+      <img src="img/illustration-box-desktop.svg" alt="Orange box with @ symbol" class="card__img-decal">
+      <div class="card__wrapper-img">
+        <picture>
+          <source media="(min-width: 900px)" srcset="img/illustration-woman-online-desktop.svg" sizes="600px">
+          <img src="img/illustration-woman-online-mobile.svg" alt="Girl using a monitor" class="card__img-primary">
+        </picture>
+      </div>
+      <div class="card__wrapper-content">
         <h1 class="card__title">FAQ</h1>
         <details class="card__detail">
           <summary class="card__summary">How many team members can I invite? <img src="img/icon-arrow-down.svg" alt="">
