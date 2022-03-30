@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Interactive rating component</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <article class="card">
+      <img src="img/icon-star.svg" alt="" class="card__symbol">
+      <h1 class="card__title">How did we do?</h1>
+      <p class="card__subtitle">
+        Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+        offering!
+      </p>
+      <div class="card__wrapper-items">
+        <div class="card__item">
+          <label for="r1">1</label>
+          <input type="radio" name="rating" value="1" id="r1" class="card__radio">
+        </div>
+        <div class="card__item">
+          <label for="r2">2</label>
+          <input type="radio" name="rating" value="2" id="r2" class="card__radio">
+        </div>
+        <div class="card__item">
+          <label for="r3">3</label>
+          <input type="radio" name="rating" value="3" id="r3" class="card__radio">
+        </div>
+        <div class="card__item">
+          <label for="r4">4</label>
+          <input type="radio" name="rating" value="4" id="r4" class="card__radio">
+        </div>
+        <div class="card__item">
+          <label for="r5">5</label>
+          <input type="radio" name="rating" value="5" id="r5" class="card__rating">
+        </div>
+      </div>
+      <button class="card__btn">Submit</button>
+    </article>
+    <footer class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/dyntbn">Joshua</a>.</p>
+    </footer>
+    <article class="card card--submitted">
+      <img src="img/illustration-thank-you.svg" alt="" class="card__img">
+      <span class="card__feedback">You selected <span>5</span> out of <span>5</span></span>
+      <h1 class="card__title">Thank you!</h1>
+      <p class="card__subtitle">
+        We appreciate you taking the time to give a rating. If you ever need more support, don't
+        hesitate to get in touch!
+      </p>
+    </article>
+  </main>
+</body>
+
+</html>

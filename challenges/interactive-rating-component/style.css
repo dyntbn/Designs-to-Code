@@ -1,0 +1,134 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--orange: hsl(25, 97%, 53%);
+	--white: hsl(0, 0%, 100%);
+	--lgray: hsl(217, 12%, 63%);
+	--dblue: hsl(213, 19%, 18%);
+	--vdblue: hsl(216, 12%, 8%);
+	--fw-400: 400;
+	--fw-700: 700;
+}
+
+body {
+	font-family: 'Overpass', sans-serif;
+	font-size: 15px;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--vdblue);
+	font-weight: var(--fw-400);
+}
+
+.attribution {
+	font-size: .7rem;
+	margin-bottom: 1rem;
+	color: white;
+	text-align: center;
+}
+
+.attribution a {
+	color: whitesmoke;
+	font-weight: var(--fw-700);
+	text-decoration: none;
+	transition: opacity 200ms ease-in-out;
+}
+
+.attribution a:hover {
+	opacity: .8;
+}
+
+.card {
+	margin: 1rem 0;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 21rem;
+	padding: 2rem;
+	border-radius: 1.5rem;
+	background: var(--dblue);
+	background-repeat: no-repeat;
+	color: var(--white);
+}
+
+.card__symbol {
+	background-color: rgba(0, 0, 0, .1);
+	padding: 1rem;
+	border-radius: 100%;
+	margin-bottom: 2rem;
+}
+
+.card__title {
+	color: var(--white);
+	margin-bottom: 1rem;
+	font-size: 1.7rem;
+}
+
+.card__subtitle {
+	color: var(--lgray);
+	margin-bottom: 2rem;
+	line-height: 1.6;
+}
+
+.card__wrapper-items {
+	display: flex;
+}
+
+.card__item {
+	position: relative;
+}
+
+.card__btn {
+	display: inline-block;
+	width: 100%;
+	padding: 1rem 2.5rem;
+	border: none;
+	border-radius: 1.5rem;
+	background-color: var(--orange);
+	color: var(--white);
+	font-weight: var(--fw-700);
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	font-size: .9rem;
+}
+
+.card__btn:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+.card__radio {
+	align-self: center;
+	margin-bottom: 2rem;
+}
+
+.card--inactive {
+	display: none;
+}
+
+.card--submitted .card__img {
+	display: block;
+	margin: auto;
+	margin-bottom: 2rem;
+}
+
+.card--submitted .card__feedback {
+	padding: .5rem 1rem;
+	margin: auto;
+	margin-bottom: 1rem;
+	background-color: rgba(10, 10, 10, .2);
+	border-radius: 2rem;
+	color: var(--orange);
+}
+
+.card--submitted .card__title {
+	margin: 1rem auto;
+}
+
+.card--submitted .card__subtitle {
+	text-align: center;
+}
