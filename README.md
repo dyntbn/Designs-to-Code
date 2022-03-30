@@ -38,3 +38,13 @@ Frontend mockup design to code. Challenges by [FrontendMentor.io](https://www.fr
   - [Code](challenges/nft-preview-card-component/)
   - [Live Preview](https://dyntbn.github.io/designs-to-code/challenges/nft-preview-card-component/index.html)
   - [FrontendMentor](https://www.frontendmentor.io/solutions/responsive-nft-preview-card-component-H6zQ8iS8S)
+
+- FAQ accordion card
+  - [Code](challenges/faq-accordion-card/)
+  - [Live Preview](https://dyntbn.github.io/designs-to-code/challenges/faq-accordion-card/index.html)
+  - [FrontendMentor](https://www.frontendmentor.io/solutions/responsive-faq-accordion-card-HkLkpJlmq)
+
+- Interactive rating component
+  - [Code](challenges/interactive-rating-component)
+  - Live Preview
+  - FrontendMentor
