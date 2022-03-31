@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
   <title>Interactive rating component</title>
@@ -25,33 +25,29 @@
       </p>
       <div class="card__wrapper-items">
         <div class="card__item">
-          <label for="r1">1</label>
           <input type="radio" name="rating" value="1" id="r1" class="card__radio">
+          <label for="r1" class="card__label">1</label>
         </div>
         <div class="card__item">
-          <label for="r2">2</label>
           <input type="radio" name="rating" value="2" id="r2" class="card__radio">
+          <label for="r2" class="card__label">2</label>
         </div>
         <div class="card__item">
-          <label for="r3">3</label>
           <input type="radio" name="rating" value="3" id="r3" class="card__radio">
+          <label for="r3" class="card__label">3</label>
         </div>
         <div class="card__item">
-          <label for="r4">4</label>
           <input type="radio" name="rating" value="4" id="r4" class="card__radio">
+          <label for="r4" class="card__label">4</label>
         </div>
         <div class="card__item">
-          <label for="r5">5</label>
-          <input type="radio" name="rating" value="5" id="r5" class="card__rating">
+          <input type="radio" name="rating" value="5" id="r5" class="card__radio">
+          <label for="r5" class="card__label">5</label>
         </div>
       </div>
       <button class="card__btn">Submit</button>
     </article>
-    <footer class="attribution">
-      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-        Coded by <a href="https://github.com/dyntbn">Joshua</a>.</p>
-    </footer>
-    <article class="card card--submitted">
+    <article class="card card--submitted card--inactive">
       <img src="img/illustration-thank-you.svg" alt="" class="card__img">
       <span class="card__feedback">You selected <span>5</span> out of <span>5</span></span>
       <h1 class="card__title">Thank you!</h1>
@@ -61,6 +57,10 @@
       </p>
     </article>
   </main>
+  <footer class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/dyntbn">Joshua</a>.</p>
+  </footer>
 </body>
 
 </html>
