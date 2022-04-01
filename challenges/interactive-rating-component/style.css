@@ -4,7 +4,7 @@
 }
 
 :root {
-	--orange: hsl(25, 97%, 53%);
+	--orange: hsl(23, 100%, 40%); /* adjusted to increase contrast levels */
 	--white: hsl(0, 0%, 100%);
 	--lgray: hsl(217, 12%, 63%);
 	--dblue: hsl(213, 19%, 18%);
@@ -39,7 +39,8 @@ body {
 	transition: opacity 200ms ease-in-out;
 }
 
-.attribution a:hover {
+.attribution a:hover,
+.attribution a:focus {
 	opacity: .8;
 }
 
@@ -48,30 +49,34 @@ body {
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
-	width: 21rem;
-	padding: 2rem;
+	width: 16.2rem;
+	padding: 1.5rem;
 	border-radius: 1.5rem;
-	background: var(--dblue);
+	background: radial-gradient(circle at top center, var(--dblue) 15%, rgba(0, 0, 0, .3)), var(--dblue);
 	background-repeat: no-repeat;
 	color: var(--white);
 }
 
 .card__symbol {
 	background-color: rgba(0, 0, 0, .1);
-	padding: 1rem;
+
+	padding: .6rem;
+	width: .9rem;
+	height: .9rem;
 	border-radius: 100%;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 
 .card__title {
 	color: var(--white);
-	margin-bottom: 1rem;
-	font-size: 1.7rem;
+	margin-bottom: 1.2rem;
+	font-size: 1.5rem;
 }
 
 .card__subtitle {
 	color: var(--lgray);
-	margin-bottom: 2rem;
+	font-size: .8rem;
+	margin-bottom: .5rem;
 	line-height: 1.6;
 }
 
@@ -80,11 +85,7 @@ body {
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
-	margin-bottom: 2rem;
-}
-
-.card__item {
-	position: relative;
+	margin: .5rem 0 1rem;
 }
 
 .card__radio {
@@ -93,6 +94,7 @@ body {
 }
 
 .card__label {
+	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	width: 1rem;
@@ -101,16 +103,14 @@ body {
 	border-radius: 50%;
 	color: var(--lgray);
 	background-color: rgba(10, 10, 10, .2);
-	transition: color 200ms ease-in-out, background-color 250ms ease-in-out;
+	transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
-.card__label:hover {
+.card__label:hover,
+.card__label:focus {
 	background-color: var(--orange);
 	color: white;
-}
-
-.card__radio:checked {
-	/* !TODO */
+	transition: color 450ms ease-in-out, background-color 450ms ease-in-out;
 }
 
 .card__radio:checked + .card__label {
@@ -121,7 +121,7 @@ body {
 .card__btn {
 	display: inline-block;
 	width: 100%;
-	padding: 1rem 2.5rem;
+	padding: 1rem 1.8rem;
 	border: none;
 	border-radius: 1.5rem;
 	background-color: var(--orange);
@@ -130,7 +130,8 @@ body {
 	text-transform: uppercase;
 	letter-spacing: .1rem;
 	font-size: .9rem;
-	transition: color 300ms ease-in-out, background-color 200ms ease-in-out;
+	box-shadow: 0.1rem 0.2rem 1rem rgb(0 0 0 / 20%);
+	transition: color 300ms ease-in-out, background-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
 .card__btn:hover {
@@ -139,8 +140,11 @@ body {
 	cursor: pointer;
 }
 
-.card--inactive {
-	display: none;
+.card__btn.card__btn-shake,
+.card__btn.card__btn--shake {
+	cursor: progress;
+	color: var(--white);
+	background-color: darkred;
 }
 
 .card--submitted .card__img {
@@ -158,10 +162,96 @@ body {
 	color: var(--orange);
 }
 
+.card--fade-in * {
+	animation: fade-in 500ms;
+}
+
+.card--fade-in .card__feedback,
+.card--fade-in .card__feedback * {
+	animation-duration: 100ms;
+}
+
 .card--submitted .card__title {
 	margin: 1rem auto;
 }
 
 .card--submitted .card__subtitle {
 	text-align: center;
+}
+
+.card--inactive {
+	display: none;
+}
+
+.card__btn--shake {
+	animation: shake 350ms ease-in-out;
+	animation-iteration-count: 1.5;
+	background-color: darkred;
+	color: var(--white);
+}
+
+@media screen and (min-width: 600px) {
+	.card {
+		width: 21rem;
+		padding: 2.2rem;
+	}
+
+	.card__symbol {
+		padding: 1.2rem;
+		width: 1rem;
+		height: 1rem;
+	}
+
+	.card__title {
+		font-size: 1.7rem;
+	}
+
+	.card__subtitle {
+		font-size: .95rem;
+		margin-bottom: 2rem;
+	}
+
+	.card__wrapper-items {
+		margin-bottom: 2rem;
+	}
+
+	.card__btn {
+		padding: 1rem 0.5rem;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	95% {
+		opacity: .9;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes shake {
+	from {
+		transform: translateX(0);
+	}
+
+	25% {
+		transform: translateX(1%);
+	}
+
+	50% {
+		transform: translateX(0);
+	}
+
+	75% {
+		transform: translateX(-1%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
 }

@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
+  <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/57770074?v=4" type="image/x-icon">
   <title>Interactive rating component</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,26 +25,20 @@
         offering!
       </p>
       <div class="card__wrapper-items">
-        <div class="card__item">
-          <input type="radio" name="rating" value="1" id="r1" class="card__radio">
-          <label for="r1" class="card__label">1</label>
-        </div>
-        <div class="card__item">
-          <input type="radio" name="rating" value="2" id="r2" class="card__radio">
-          <label for="r2" class="card__label">2</label>
-        </div>
-        <div class="card__item">
-          <input type="radio" name="rating" value="3" id="r3" class="card__radio">
-          <label for="r3" class="card__label">3</label>
-        </div>
-        <div class="card__item">
-          <input type="radio" name="rating" value="4" id="r4" class="card__radio">
-          <label for="r4" class="card__label">4</label>
-        </div>
-        <div class="card__item">
-          <input type="radio" name="rating" value="5" id="r5" class="card__radio">
-          <label for="r5" class="card__label">5</label>
-        </div>
+        <input type="radio" name="rating" value="1" id="r1" class="card__radio">
+        <label for="r1" tabindex="0" class="card__label">1</label>
+
+        <input type="radio" name="rating" value="2" id="r2" class="card__radio">
+        <label for="r2" tabindex="0" class="card__label">2</label>
+
+        <input type="radio" name="rating" value="3" id="r3" class="card__radio">
+        <label for="r3" tabindex="0" class="card__label">3</label>
+
+        <input type="radio" name="rating" value="4" id="r4" class="card__radio">
+        <label for="r4" tabindex="0" class="card__label">4</label>
+
+        <input type="radio" name="rating" value="5" id="r5" class="card__radio">
+        <label for="r5" tabindex="0" class="card__label">5</label>
       </div>
       <button class="card__btn">Submit</button>
     </article>
