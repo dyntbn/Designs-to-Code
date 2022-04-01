@@ -18,9 +18,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column;
 }
 
 .card {
+  margin: 1rem 0;
   background-color: var(--white);
   width: 350px;
   padding: 1rem;
@@ -57,6 +59,25 @@ body {
 .card__title,
 .card__text {
   text-align: center;
+}
+
+.attribution {
+  font-size: .7rem;
+  margin-bottom: 1rem;
+  color: var(--dblue);
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--dblue);
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 200ms ease-in-out;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  opacity: .8;
 }
 
 @media screen and (max-width: 375px) {
