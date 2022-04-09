@@ -1,0 +1,128 @@
+:root {
+	--primary-dred: hsl(0, 36%, 70%);
+	--primary-sred: hsl(0, 93%, 68%);
+	--primary-pink: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	--neutral-dgred: hsl(0, 6%, 24%);
+	--neutral-white: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	--ff-primary: 'Josefin Sans', sans-serif;
+	--fw-300: 300;
+	--fw-400: 400;
+	--fw-600: 600;
+}
+
+h1,
+body,
+p {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	display: block;
+}
+
+body {
+	min-height: 100vh;
+	background: var(--neutral-white);
+	font-family: var(--ff-primary);
+	font-size: 1rem;
+}
+
+.container {
+	width: 80%;
+	margin-inline: auto;
+}
+
+header {
+	margin-block: 2rem;
+}
+
+.hero img {
+	width: 100%;
+}
+
+.form__title,
+.form__subtitle {
+	text-align: center;
+}
+
+.form__title {
+	margin-top: 3rem;
+	color: var(--primary-dred);
+	font-size: 3rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: .5rem;
+}
+
+.form__title span {
+	color: var(--neutral-dgred);
+	font-weight: 600;
+}
+
+.form__subtitle {
+	color: var(--primary-dred);
+	line-height: 1.4;
+	margin-block: 2rem;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	border: 1px solid var(--primary-dred);
+	border-radius: 2rem;
+}
+
+.form__email {
+	border: none;
+	outline: none;
+	padding: .75rem;
+	border-radius: 2rem 0 0 2rem;
+	width: 100%;
+	background-color: transparent;
+	color: var(--neutral-dgred);
+	margin-left: .5rem;
+}
+
+.form__email::placeholder {
+	transition: color 200ms ease-in-out, opacity 200ms ease-in-out;
+	color: var(--primary-dred);
+	opacity: .7;
+}
+
+.form__email:focus::placeholder {
+	opacity: 1;
+}
+
+.form__btn {
+	border: none;
+	background: var(--primary-pink);
+	color: white;
+	cursor: pointer;
+	padding: .75rem 2.25rem;
+	border-radius: 2rem;
+	transition: transform 300ms ease-in-out;
+}
+
+.form__btn:hover {
+	transform: scale(1.2);
+}
+
+.attribution {
+	text-align: center;
+	font-size: .8rem;
+	margin-block: 1rem;
+	color: var(--neutral-dgred);
+}
+
+.attribution a {
+	text-decoration: none;
+	font-weight: var(--fw-600);
+	color: lightcoral;
+	transition: opacity 300ms ease-in-out;
+}
+
+.attribution a:hover {
+	opacity: .7;
+}
