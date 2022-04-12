@@ -33,11 +33,15 @@ body {
 	margin-inline: auto;
 }
 
-header {
+.logo {
 	margin-block: 2rem;
 }
 
-.hero img {
+.logo__img {
+	height: 1.5rem;
+}
+
+.hero__img {
 	width: 100%;
 }
 
@@ -66,12 +70,27 @@ header {
 	margin-block: 2rem;
 }
 
-form {
+.form {
+	display: block;
+	min-height: 4rem;
+}
+
+.form__wrapper {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
 	border: 1px solid var(--primary-dred);
 	border-radius: 2rem;
+	transition: opacity 400ms ease-in-out;
+}
+
+.form__success {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	margin-block: 2rem;
+	height: 1.40rem;
+	color: darkgoldenrod;
 }
 
 .form__email {
@@ -94,19 +113,42 @@ form {
 .form__email:focus::placeholder {
 	opacity: 1;
 }
+.form__error-img {
+	margin-right: 1rem;
+}
+
+.form__error-img--hidden {
+	display: none;
+}
 
 .form__btn {
 	border: none;
 	background: var(--primary-pink);
 	color: white;
 	cursor: pointer;
-	padding: .75rem 2.25rem;
+	padding: .75rem 1.5rem;
 	border-radius: 2rem;
 	transition: transform 300ms ease-in-out;
 }
 
 .form__btn:hover {
 	transform: scale(1.2);
+	box-shadow: .1rem .2rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.feedback {
+	min-height: 1rem;
+	margin-top: .5rem;
+	margin-left: 1.3rem;
+}
+
+.feedback p {
+	font-size: .8rem;
+	color: var(--primary-sred);
+}
+
+.feedback--hidden {
+	display: none;
 }
 
 .attribution {
@@ -125,4 +167,75 @@ form {
 
 .attribution a:hover {
 	opacity: .7;
+}
+
+@media screen and (min-width: 800px) {
+	main {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	header {
+		width: 50%;
+		position: absolute;
+	}
+
+	.hero {
+		width: 50%;
+	}
+
+	.hero__img {
+		height: 100vh;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.form {
+		width: 50%;
+	}
+
+	.form .container {
+		height: 100vh;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.form__title {
+		font-size: 3rem;
+		text-align: left;
+		letter-spacing: 1rem;
+		line-height: 1.1;
+	}
+
+	.form__subtitle {
+		text-align: left;
+		font-size: 1.1rem;
+		line-height: 1.4;
+	}
+
+	footer {
+		position: absolute;
+		width: 50%;
+		bottom: 2rem;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.logo {
+		margin-block: 3rem;
+	}
+
+	.logo__img {
+		height: 2rem;
+	}
+
+	.form__title {
+		font-size: 4.5rem;
+	}
+
+	.form__subtitle {
+		font-size: 1.3rem;
+	}
 }

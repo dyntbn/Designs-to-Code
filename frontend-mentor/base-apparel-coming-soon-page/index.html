@@ -15,14 +15,17 @@
 </head>
 
 <body>
+  <header class="logo">
+    <div class="container">
+      <img src="img/logo.svg" alt="Base Apparel Logo" class="logo__img">
+    </div>
+  </header>
   <main>
-    <header>
-      <div class="container">
-        <img src="img/logo.svg" alt="Base Apparel Logo">
-      </div>
-    </header>
     <div class="hero">
-      <img src="img/hero-mobile.jpg" alt="">
+      <picture>
+        <source media="(min-width: 800px)" srcset="img\hero-desktop.jpg">
+        <img src="img/hero-mobile.jpg" alt="" class="hero__img">
+      </picture>
     </div>
     <section class="form">
       <div class="container">
@@ -31,12 +34,17 @@
           your email
           below to
           stay up-to-date with announcements and our launch deals.</p>
-        <form action="">
-          <input type="email" name="email" id="email" placeholder="Email Address" class="form__email">
-          <img src="img/icon-error.svg" alt="" class="form__error-img">
-          <button type="submit" class="form__btn"><img src="img/icon-arrow.svg" alt=""></button>
-          <div class="form__feedback"></div>
+        <form>
+          <div class="form__wrapper">
+            <input type="email" name="email" id="email" placeholder="Email Address" class="form__email">
+            <img src="img/icon-error.svg" alt="" class="form__error-img form__error-img--hidden">
+            <button type="submit" class="form__btn"><img src="img/icon-arrow.svg" alt=""></button>
+          </div>
+          <p class="form__success">Thank you for Subscribing!</p>
         </form>
+        <div class="feedback">
+          <p class="feedback__text feedback--hidden">Please provide a valid email address</p>
+        </div>
       </div>
     </section>
   </main>
@@ -45,7 +53,7 @@
     <div class="container">
       <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Joshua</a>.
+        Coded by <a href="https://github.com/dyntbn">Joshua</a>.
       </p>
     </div>
   </footer>
