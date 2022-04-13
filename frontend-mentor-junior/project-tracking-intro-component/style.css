@@ -1,0 +1,30 @@
+:root {
+	--red: hsl(0, 100%, 68%);
+	--vdblue: hsl(230, 29%, 20%);
+	--gblue: hsl(231, 7%, 65%);
+	--lgblue: hsl(207, 33%, 95%);
+	--ff-primary: 'Barlow Condensed', sans-serif;
+	--ff-secondary: 'Barlow', sans-serif;
+	--fw-400: 400;
+	--fw-700: 700;
+}
+
+body {
+	font-family: var(--ff-secondary);
+	font-weight: var(--fw-400);
+}
+
+.attribution {
+	color: var(--vdblue);
+}
+
+.attribution a {
+	color: cadetblue;
+	font-weight: var(--fw-700);
+	text-decoration: none;
+	transition: opacity 200ms ease-in-out;
+}
+
+.attribution a:hover {
+	opacity: .8;
+}
